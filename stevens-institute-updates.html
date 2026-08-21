@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tradespace Updates – Stevens Institute of Technology</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(160deg, #060d18 0%, #0c1a2e 45%, #081320 100%);
+      min-height: 100vh;
+      color: #e8edf5;
+    }
+
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #4f9cf9, #2563eb);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #fff;
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.3px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(79,156,249,0.35) 0%, rgba(79,156,249,0.04) 100%);
+      margin: 22px 0 34px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      margin-bottom: 44px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #4f9cf9;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #4f9cf9, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: #94a3be;
+      line-height: 1.65;
+      max-width: 640px;
+    }
+
+    /* ── Cards ── */
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #4f9cf9;
+      margin-bottom: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 24px 22px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      background: rgba(79,156,249,0.07);
+      border-color: rgba(79,156,249,0.28);
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+
+    .card-icon.blue  { background: rgba(37,99,235,0.22); }
+    .card-icon.teal  { background: rgba(20,184,166,0.22); }
+    .card-icon.violet{ background: rgba(124,58,237,0.22); }
+    .card-icon.amber { background: rgba(245,158,11,0.22); }
+    .card-icon.rose  { background: rgba(244,63,94,0.22);  }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+    }
+
+    .card-body {
+      font-size: 13px;
+      color: #94a3be;
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-top: 11px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(79,156,249,0.13);
+      color: #7ab8fb;
+    }
+
+    /* Wide card (full width) */
+    .card-wide {
+      grid-column: 1 / -1;
+    }
+
+    /* ── Quote ── */
+    .quote-block {
+      margin: 36px 0;
+      padding: 24px 26px;
+      background: rgba(79,156,249,0.07);
+      border-left: 3px solid #2563eb;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .quote-text {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .quote-source {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #475569;
+    }
+
+    .footer-link {
+      font-size: 12px;
+      color: #4f9cf9;
+      text-decoration: none;
+    }
+
+    @media (max-width: 560px) {
+      .cards { grid-template-columns: 1fr; }
+      .hero-title { font-size: 24px; }
+      .card-wide { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-mark">T</div>
+    <div class="logo-text">Tradespace</div>
+  </div>
+  <div class="divider"></div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">Platform Updates · August 2026</div>
+    <h1 class="hero-title">What's new at Tradespace —<br><span>built for offices like Stevens'</span></h1>
+    <p class="hero-sub">
+      A summary of the capabilities that have evolved since we last connected —
+      focused on what matters most for a TTO running a growing, cross-disciplinary
+      engineering and applied science portfolio with a lean team and real prosecution costs.
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="section-label">New &amp; Updated Capabilities</div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon blue">⚖️</div>
+      <div class="card-title">Tradespace Counsel</div>
+      <div class="card-body">
+        A flat-fee prosecution network built for institutions that want to file more without scaling outside counsel spend.
+        Provisionals from $1K, utility applications drafted and filed in under a week for under $5K —
+        through a vetted network of 250+ patent attorneys from firms like Patterson+Sheridan.
+        Faculty disclosures that stall because of cost or capacity now have a direct path forward.
+      </div>
+      <span class="card-tag">Prosecution Cost</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon teal">🤝</div>
+      <div class="card-title">Suggested Partners Agent</div>
+      <div class="card-body">
+        AI-powered partner matching that surfaces the right industry contacts and companies for each technology —
+        ranked by fit, financial readiness, and strategic alignment with the research area.
+        For Stevens' portfolio spanning ocean engineering, AI/ML, quantitative finance, and chemical engineering,
+        the right commercial partner is rarely obvious — this finds them.
+      </div>
+      <span class="card-tag">Commercialization</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon violet">📥</div>
+      <div class="card-title">Invention Disclosure Portal</div>
+      <div class="card-body">
+        A streamlined faculty-facing intake experience that reduces the friction between a researcher's
+        idea and a formal disclosure. Structured prompts guide engineers and scientists through
+        what the office actually needs — so your team spends less time chasing incomplete submissions
+        and more time evaluating what came in.
+      </div>
+      <span class="card-tag">Faculty Intake</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon amber">⚡</div>
+      <div class="card-title">AI Filing Event Processing</div>
+      <div class="card-body">
+        Automated monitoring and processing of office actions, USPTO deadlines, and response windows —
+        without your team manually tracking every docket milestone. The system flags what's coming,
+        drafts initial responses where applicable, and keeps prosecution moving without adding headcount
+        to manage the administrative layer.
+      </div>
+      <span class="card-tag">Prosecution Operations</span>
+    </div>
+
+    <div class="card card-wide">
+      <div class="card-icon rose">🗂️</div>
+      <div class="card-title">Departments &amp; Business Units — Portfolio by Research Area</div>
+      <div class="card-body">
+        Slice your IP portfolio by department, research center, or faculty group — so you can see
+        what's active, what's pending, and where the commercialization backlog is actually sitting.
+        For a university like Stevens with distinct engineering disciplines that each have their own
+        industry relationships and timelines, this view replaces the spreadsheet workaround that most
+        TTO directors tell us they're still relying on.
+      </div>
+      <span class="card-tag">Portfolio Visibility</span>
+    </div>
+
+  </div>
+
+  <!-- Quote -->
+  <div class="quote-block">
+    <div class="quote-text">
+      "Offices like our customers at IIT and Arkansas State tell us that the disclosure and evaluation side
+      is where the bottleneck forms — the inventory of potentially commercializable technologies grows faster
+      than the capacity to assess and route each one to the right partner. When a promising technology gets
+      published before the right industry contact has been identified, that window closes quickly."
+    </div>
+    <div class="quote-source">— Tradespace, from conversations across 40+ TTO partners</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-copy">© 2026 Tradespace · Prepared for Stevens Institute of Technology</div>
+    <a class="footer-link" href="https://tradespace.io">tradespace.io</a>
+  </div>
+
+</div>
+</body>
+</html>
