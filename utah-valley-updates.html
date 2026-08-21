@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tradespace Updates — Utah Valley University</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(160deg, #060d18 0%, #0c1a2e 45%, #081320 100%);
+      min-height: 100vh;
+      color: #e8edf5;
+    }
+
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, #4f9cf9, #2563eb);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px; color: #fff;
+      letter-spacing: -1px; flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 19px; font-weight: 700; color: #fff; letter-spacing: 0.3px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(79,156,249,0.35) 0%, rgba(79,156,249,0.04) 100%);
+      margin: 22px 0 34px;
+    }
+
+    .hero { margin-bottom: 44px; }
+
+    .hero-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.6px;
+      text-transform: uppercase; color: #4f9cf9; margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 30px; font-weight: 800; color: #fff;
+      line-height: 1.18; margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #4f9cf9, #93c5fd);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 15px; color: #94a3be; line-height: 1.65; max-width: 640px;
+    }
+
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #4f9cf9; margin-bottom: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 24px 22px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      background: rgba(79,156,249,0.07);
+      border-color: rgba(79,156,249,0.28);
+    }
+
+    .card-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; margin-bottom: 14px;
+    }
+
+    .card-icon.blue   { background: rgba(37,99,235,0.22); }
+    .card-icon.teal   { background: rgba(20,184,166,0.22); }
+    .card-icon.violet { background: rgba(124,58,237,0.22); }
+    .card-icon.amber  { background: rgba(245,158,11,0.22); }
+    .card-icon.rose   { background: rgba(244,63,94,0.22); }
+
+    .card-title {
+      font-size: 14px; font-weight: 700; color: #e2e8f0; margin-bottom: 8px;
+    }
+
+    .card-body {
+      font-size: 13px; color: #94a3be; line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block; margin-top: 11px;
+      font-size: 10.5px; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
+      background: rgba(79,156,249,0.13); color: #7ab8fb;
+    }
+
+    .card-wide { grid-column: 1 / -1; }
+
+    .quote-block {
+      margin: 36px 0; padding: 24px 26px;
+      background: rgba(79,156,249,0.07);
+      border-left: 3px solid #2563eb;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .quote-text {
+      font-size: 14.5px; color: #cbd5e1; line-height: 1.7; font-style: italic;
+    }
+
+    .quote-source { margin-top: 10px; font-size: 12px; color: #64748b; }
+
+    .footer {
+      margin-top: 52px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+
+    .footer-copy { font-size: 12px; color: #475569; }
+    .footer-link { font-size: 12px; color: #4f9cf9; text-decoration: none; }
+
+    @media (max-width: 560px) {
+      .cards { grid-template-columns: 1fr; }
+      .hero-title { font-size: 24px; }
+      .card-wide { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="header">
+    <div class="logo-mark">T</div>
+    <div class="logo-text">Tradespace</div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="hero">
+    <div class="hero-label">Platform Updates · August 2026</div>
+    <h1 class="hero-title">What's new at Tradespace —<br><span>built for innovation offices doing more with less</span></h1>
+    <p class="hero-sub">
+      A summary of the capabilities that have evolved this year, focused on what matters
+      most for an innovation office balancing a growing research portfolio, active
+      entrepreneurship programming, and a lean team expected to move disclosures
+      toward commercialization without adding headcount.
+    </p>
+  </div>
+
+  <div class="section-label">New &amp; Updated Capabilities</div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon teal">🤝</div>
+      <div class="card-title">Suggested Partners Agent</div>
+      <div class="card-body">
+        Rebuilt AI partner matching that identifies companies, investors, and VC firms
+        most likely to license, co-develop, or commercialize a given technology. For
+        each opportunity, the agent proposes up to three partner archetypes specific
+        to the technology's stage and market fit, sources candidates, and scores them
+        by partnership likelihood, technical fit, and financial readiness. For a lean
+        innovation office, this replaces the manual research that typically consumes
+        the most time before a licensing conversation can even start.
+      </div>
+      <span class="card-tag">Partner Matching</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon violet">📥</div>
+      <div class="card-title">Invention Disclosure Portal</div>
+      <div class="card-body">
+        A streamlined faculty-facing intake experience that guides researchers through
+        exactly what the innovation office needs from a disclosure, reducing incomplete
+        submissions and back-and-forth follow-up. For an office where the innovation
+        mandate sits alongside entrepreneurship programming, a cleaner intake process
+        means the team spends its time evaluating what came in rather than chasing
+        down missing information from busy faculty.
+      </div>
+      <span class="card-tag">Faculty Intake</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon blue">⚖️</div>
+      <div class="card-title">Managed Filing Service</div>
+      <div class="card-body">
+        AI-assisted patent drafting combined with attorney review and filing through
+        a vetted network of 250+ patent attorneys. Provisionals from $1,000 and
+        utility applications under $5,000, drafted and filed in under a week.
+        For a growing research program where every filing dollar has to be justified,
+        this removes the cost and capacity barrier that causes viable technologies
+        to stall before they reach a licensing conversation.
+      </div>
+      <span class="card-tag">Prosecution Cost</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon amber">🌐</div>
+      <div class="card-title">Marketplace and Partner Engagement</div>
+      <div class="card-body">
+        Export any opportunity as a PDF or Word document to share a non-confidential
+        summary directly with industry contacts or at entrepreneurship events. Partners
+        and companies can submit meeting requests directly from your private marketplace
+        without requiring the team to manage each introduction manually. Refreshed UI
+        with inventor filter and full mobile support so opportunities are accessible
+        and actionable anywhere.
+      </div>
+      <span class="card-tag">Commercialization</span>
+    </div>
+
+    <div class="card card-wide">
+      <div class="card-icon rose">📊</div>
+      <div class="card-title">Portfolio Visibility Across the Innovation Pipeline</div>
+      <div class="card-body">
+        Each disclosure, filing, and agreement now includes a Finance tab with spend
+        and revenue summaries and drill-downs, giving the innovation office a clear
+        picture of what the portfolio is costing and what it is returning at any point
+        in time. Departments and Business Units lets you organize and view the portfolio
+        by research area or program, so it is easy to see where disclosures are
+        concentrating and where the commercialization backlog is actually sitting.
+        A Related tab brings agreements, grants, opportunities, and emails together
+        under a single view per disclosure, replacing the spreadsheet workaround
+        most innovation offices are still relying on.
+      </div>
+      <span class="card-tag">Portfolio Visibility</span>
+    </div>
+
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-text">
+      "At teaching-focused universities with growing research programs, the innovation
+      office is often asked to do more with a lean team. The core challenge is triage:
+      determining which technologies in the portfolio have the clearest path to a
+      licensing partner or spinout, and acting on those quickly before the research
+      matures past the point where industry interest is easiest to generate."
+    </div>
+    <div class="quote-source">— Tradespace, from conversations across 40+ university TTO and innovation office partners</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-copy">© 2026 Tradespace · Prepared for Utah Valley University</div>
+    <a class="footer-link" href="https://tradespace.io">tradespace.io</a>
+  </div>
+
+</div>
+</body>
+</html>
