@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tradespace Updates — University Health Network</title>
+  <style>
+    *, *::before, *::before { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(160deg, #060d18 0%, #0c1a2e 45%, #081320 100%);
+      min-height: 100vh;
+      color: #e8edf5;
+    }
+
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, #4f9cf9, #2563eb);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px; color: #fff;
+      letter-spacing: -1px; flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 19px; font-weight: 700; color: #fff; letter-spacing: 0.3px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(79,156,249,0.35) 0%, rgba(79,156,249,0.04) 100%);
+      margin: 22px 0 34px;
+    }
+
+    .hero { margin-bottom: 44px; }
+
+    .hero-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.6px;
+      text-transform: uppercase; color: #4f9cf9; margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-size: 30px; font-weight: 800; color: #fff;
+      line-height: 1.18; margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #4f9cf9, #93c5fd);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 15px; color: #94a3be; line-height: 1.65; max-width: 640px;
+    }
+
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #4f9cf9; margin-bottom: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 24px 22px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      background: rgba(79,156,249,0.07);
+      border-color: rgba(79,156,249,0.28);
+    }
+
+    .card-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; margin-bottom: 14px;
+    }
+
+    .card-icon.blue   { background: rgba(37,99,235,0.22); }
+    .card-icon.teal   { background: rgba(20,184,166,0.22); }
+    .card-icon.violet { background: rgba(124,58,237,0.22); }
+    .card-icon.amber  { background: rgba(245,158,11,0.22); }
+    .card-icon.rose   { background: rgba(244,63,94,0.22); }
+
+    .card-title {
+      font-size: 14px; font-weight: 700; color: #e2e8f0; margin-bottom: 8px;
+    }
+
+    .card-body {
+      font-size: 13px; color: #94a3be; line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block; margin-top: 11px;
+      font-size: 10.5px; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
+      background: rgba(79,156,249,0.13); color: #7ab8fb;
+    }
+
+    .card-wide { grid-column: 1 / -1; }
+
+    .quote-block {
+      margin: 36px 0; padding: 24px 26px;
+      background: rgba(79,156,249,0.07);
+      border-left: 3px solid #2563eb;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .quote-text {
+      font-size: 14.5px; color: #cbd5e1; line-height: 1.7; font-style: italic;
+    }
+
+    .quote-source { margin-top: 10px; font-size: 12px; color: #64748b; }
+
+    .footer {
+      margin-top: 52px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+
+    .footer-copy { font-size: 12px; color: #475569; }
+    .footer-link { font-size: 12px; color: #4f9cf9; text-decoration: none; }
+
+    @media (max-width: 560px) {
+      .cards { grid-template-columns: 1fr; }
+      .hero-title { font-size: 24px; }
+      .card-wide { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="header">
+    <div class="logo-mark">T</div>
+    <div class="logo-text">Tradespace</div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="hero">
+    <div class="hero-label">Platform Updates · August 2026</div>
+    <h1 class="hero-title">What's new at Tradespace —<br><span>built for translational research at UHN's scale</span></h1>
+    <p class="hero-sub">
+      A summary of the capabilities that have evolved since we last connected,
+      focused on what matters most for a translational research and innovation office
+      managing a high-volume, multi-site pipeline across oncology, cardiology,
+      transplantation, and regenerative medicine.
+    </p>
+  </div>
+
+  <div class="section-label">New &amp; Updated Capabilities</div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon teal">🤝</div>
+      <div class="card-title">Suggested Partners Agent</div>
+      <div class="card-body">
+        Rebuilt AI partner matching that identifies and ranks pharma, medtech, and biotech
+        organizations most likely to license, co-develop, or invest in a given technology.
+        For each opportunity, the agent proposes up to three partner archetypes tailored
+        to the research stage and innovation type, sources candidate organizations, and
+        scores them by partnership likelihood, technical fit, and financial readiness.
+        Adapted for hospital research context, so the results reflect how translational
+        partnerships actually happen, not how they happen in a corporate licensing model.
+      </div>
+      <span class="card-tag">Partner Matching</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon blue">⚖️</div>
+      <div class="card-title">Managed Filing Service</div>
+      <div class="card-body">
+        AI-assisted patent drafting combined with attorney review and filing through a
+        vetted network of 250+ patent attorneys. Provisionals from $1,000 and utility
+        applications under $5,000, drafted and filed in under a week. For a research
+        office managing disclosures across Toronto General, Toronto Western, and
+        Princess Margaret simultaneously, this removes the cost and capacity barrier
+        that causes promising technologies to sit without protection.
+      </div>
+      <span class="card-tag">Prosecution Cost</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon violet">🌐</div>
+      <div class="card-title">Marketplace Updates</div>
+      <div class="card-body">
+        Opportunity pages now support direct partner engagement: pharma and medtech
+        companies can submit meeting requests from your private marketplace without
+        back-and-forth email. Export any opportunity as a PDF or Word document to
+        share a non-confidential summary at conferences or directly with potential
+        partners. Refreshed UI with inventor filter and full mobile optimization
+        so the team can review and act on opportunities anywhere.
+      </div>
+      <span class="card-tag">Commercialization</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon amber">⚡</div>
+      <div class="card-title">AI Filing Event Processing</div>
+      <div class="card-body">
+        Upload office actions or correspondence PDFs and Tradespace automatically
+        identifies the event type, summarizes the content, and extracts the received
+        date and response deadlines. For a team managing prosecution across multiple
+        hospital sites and outside counsel relationships, this eliminates the manual
+        tracking layer that causes deadlines to slip during high-volume periods.
+      </div>
+      <span class="card-tag">Prosecution Operations</span>
+    </div>
+
+    <div class="card card-wide">
+      <div class="card-icon rose">📊</div>
+      <div class="card-title">Finance Module and Portfolio Visibility</div>
+      <div class="card-body">
+        Each disclosure, filing, and agreement now includes a Finance tab with spend
+        and revenue summaries and drill-downs into individual records, giving your
+        office a clear picture of what the portfolio is costing and what it is
+        generating at any point in time. Paired with Departments and Business Units,
+        which lets you slice the portfolio by research division or hospital site,
+        this makes it straightforward to report on what each area of UHN's research
+        enterprise is producing, what it costs to protect, and where the commercial
+        pipeline actually stands. A Related tab brings agreements, grants, opportunities,
+        deals, and emails together under a single view per disclosure, so nothing
+        gets lost across disconnected records.
+      </div>
+      <span class="card-tag">Portfolio Visibility</span>
+    </div>
+
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-text">
+      "In large academic health systems, the volume of disclosure activity across
+      multiple hospital sites creates a triage problem that compounds over time.
+      The capacity to assess which technologies are closest to a pharma or medical
+      device partner, and which partners are actively looking for exactly what you
+      hold, rarely keeps pace with that volume. The regulatory complexity layered
+      on top makes it harder to move quickly even when a strong match exists."
+    </div>
+    <div class="quote-source">— Tradespace, from conversations across 40+ university TTO and hospital research partners</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-copy">© 2026 Tradespace · Prepared for University Health Network</div>
+    <a class="footer-link" href="https://tradespace.io">tradespace.io</a>
+  </div>
+
+</div>
+</body>
+</html>
